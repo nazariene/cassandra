@@ -4,7 +4,7 @@ VOLUME /tmp
 
 ARG JAR_FILE=target/demo.jar
 ADD ${JAR_FILE} app.jar
-ADD entrypoint.sh entrypoint.sh
+
 RUN chmod 777 /entrypoint.sh
 
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
